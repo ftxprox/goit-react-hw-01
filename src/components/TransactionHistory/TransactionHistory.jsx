@@ -1,22 +1,22 @@
-import css from "../TransactionHistory/TransactionHistory.module.css";
+import s from "../TransactionHistory/TransactionHistory.module.css";
 
 const TransactionHistory = ({ items }) => {
     console.log(items);
 
-    return <table className={css.table}>
-        <thead className={css.thead}>
-            <tr className={css.tr}>
-                <th className={css.th}>Type</th>
-                <th className={css.th}>Amount</th>
-                <th className={css.th}>Currency</th>
+    return <table className={s.table}>
+        <thead className={s.thead}>
+            <tr className={s.tr}>
+                <th className={s.th}>Type</th>
+                <th className={s.th}>Amount</th>
+                <th className={s.th}>Currency</th>
             </tr>
         </thead>
 
-        <tbody className={css.tbody}>
-            {items.map(({ id, type, amount, currency }) => (<tr key={id} className={css.tr}>
-                <td className={css.td}>{type}</td>
-                <td className={css.td}>{amount}</td>
-                <td className={css.td}>{currency}</td>
+        <tbody className={s.tbody}>
+            {items.map(({ id, type, amount, currency }) => (<tr key={id} className={s.tr}>
+                <td className={s.td}>{type}</td>
+                <td className={s.td}>{amount}</td>
+                <td className={s.td}>{currency}</td>
             </tr>))}
         </tbody>
     </table>
